@@ -87,7 +87,7 @@ class ReflexAgent(Agent):
             for ghostState in newGhostStates:
                 if manhattanDistance(ghostState.getPosition(), newPos) < 2 and ghostState.scaredTimer is 0:
                     return -infinity
-                elif ghostState.scaredTimer > 1:
+                elif ghostState.scaredTimer > 4:
                     distance.append(-manhattanDistance(ghostState.getPosition(), newPos))
         for foodPos in foodList:
             distance.append(-manhattanDistance(foodPos, newPos))
